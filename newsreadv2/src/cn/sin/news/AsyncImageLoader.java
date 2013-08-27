@@ -19,11 +19,12 @@ public class AsyncImageLoader {
 	    	 imageCache = new HashMap<String, SoftReference<Drawable>>();
 	     }
 	  
-	     public Drawable loadDrawable(final String imageUrl, final ImageCallback imageCallback) {
+	     public Drawable loadDrawable(final String imageUrl, final ImageCallback imageCallback) {     
 	         if (imageCache.containsKey(imageUrl)) {
 	             SoftReference<Drawable> softReference = imageCache.get(imageUrl);
 	             Drawable drawable = softReference.get();
 	             if (drawable != null) {
+	            	 System.out.println(".................................................");
 	                 return drawable;
 	             }
 	         }
